@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bari WiFi</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Bari WiFi</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#plans">Plans</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section id="home" class="hero">
+        <h2>Fast and Affordable Internet for Everyone</h2>
+        <p>Experience seamless connectivity with Bari WiFi.</p>
+    </section>
+
+    <!-- Plans -->
+    <section id="plans">
+    <h2>Our Plans</h2>
+    <div class="plans-grid">
+        <!-- Plans without offers (no offer button) -->
+        <div class="plan">
+            <i class="fas fa-tachometer-alt fa-3x"></i>
+            <h3>10 Mbps</h3>
+            <p>₹199 per month</p>
+        </div>
+        <div class="plan">
+            <i class="fas fa-tachometer-alt fa-3x"></i>
+            <h3>15 Mbps</h3>
+            <p>₹250 per month</p>
+        </div>
+        <div class="plan">
+            <i class="fas fa-tachometer-alt fa-3x"></i>
+            <h3>25 Mbps</h3>
+            <p>₹300 per month</p>
+        </div>
+
+        <!-- Plans with expandable offer details -->
+        <div class="plan">
+            <i class="fas fa-tachometer-alt fa-3x"></i>
+            <h3>40 Mbps</h3>
+            <p>₹400 per month</p>
+            <button class="offer-btn" onclick="toggleOffer('offer-40')">View Offers</button>
+            <div id="offer-40" class="offer-details" style="display:none;">
+                <div class="offer-box" onclick="showDetails('offer-40-3')">
+                    <p><strong>3 Months + 1 Month Extra</strong></p>
+                </div>
+                <div class="offer-box" onclick="showDetails('offer-40-5')">
+                    <p><strong>5 Months + 2 Months Extra</strong></p>
+                </div>
+                <div class="offer-box" onclick="showDetails('offer-40-9')">
+                    <p><strong>9 Months + 4 Months Extra</strong></p>
+                </div>
+                <!-- Detailed offer details hidden initially -->
+                <div id="offer-40-3" class="offer-details-content" style="display:none;">
+                    <p><strong>Price:</strong> ₹400 × 3 = ₹1200 for 3 months + 1 month extra</p>
+                    <p><strong>Validity:</strong> 4 months</p>
+                </div>
+                <div id="offer-40-5" class="offer-details-content" style="display:none;">
+                    <p><strong>Price:</strong> ₹400 × 5 = ₹2000 for 5 months + 2 months extra</p>
+                    <p><strong>Validity:</strong> 7 months</p>
+                </div>
+                <div id="offer-40-9" class="offer-details-content" style="display:none;">
+                    <p><strong>Price:</strong> ₹400 × 9 = ₹3600 for 9 months + 4 months extra</p>
+                    <p><strong>Validity:</strong> 13 months</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 50 Mbps Plan -->
+        <div class="plan">
+            <i class="fas fa-tachometer-alt fa-3x"></i>
+            <h3>50 Mbps</h3>
+            <p>₹450 per month</p>
+            <button class="offer-btn" onclick="toggleOffer('offer-50')">View Offers</button>
+            <div id="offer-50" class="offer-details" style="display:none;">
+                <div class="offer-box" onclick="showDetails('offer-50-3')">
+                    <p><strong>3 Months + 1 Month Extra</strong></p>
+                </div>
+                <div class="offer-box" onclick="showDetails('offer-50-5')">
+                    <p><strong>5 Months + 2 Months Extra</strong></p>
+                </div>
+                <div class="offer-box" onclick="showDetails('offer-50-9')">
+                    <p><strong>9 Months + 4 Months Extra</strong></p>
+                </div>
+                <!-- Detailed offer details hidden initially -->
+                <div id="offer-50-3" class="offer-details-content" style="display:none;">
+                    <p><strong>Price:</strong> ₹450 × 3 = ₹1350 for 3 months + 1 month extra</p>
+                    <p><strong>Validity:</strong> 4 months</p>
+                </div>
+                <div id="offer-50-5" class="offer-details-content" style="display:none;">
+                    <p><strong>Price:</strong> ₹450 × 5 = ₹2250 for 5 months + 2 months extra</p>
+                    <p><strong>Validity:</strong> 7 months</p>
+                </div>
+                <div id="offer-50-9" class="offer-details-content" style="display:none;">
+                    <p><strong>Price:</strong> ₹450 × 9 = ₹4050 for 9 months + 4 months extra</p>
+                    <p><strong>Validity:</strong> 13 months</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 60 Mbps Plan -->
+        <div class="plan">
+            <i class="fas fa-tachometer-alt fa-3x"></i>
+            <h3>60 Mbps</h3>
+            <p>₹500 per month</p>
+            <button class="offer-btn" onclick="toggleOffer('offer-60')">View Offers</button>
+            <div id="offer-60" class="offer-details" style="display:none;">
+                <div class="offer-box" onclick="showDetails('offer-60-3')">
+                    <p><strong>3 Months + 1 Month Extra</strong></p>
+                </div>
+                <div class="offer-box" onclick="showDetails('offer-60-5')">
+                    <p><strong>5 Months + 2 Months Extra</strong></p>
+                </div>
+                <div class="offer-box" onclick="showDetails('offer-60-9')">
+                    <p><strong>9 Months + 4 Months Extra</strong></p>
+                </div>
+                <!-- Detailed offer details hidden initially -->
+                <div id="offer-60-3" class="offer-details-content" style="display:none;">
+                    <p><strong>Price:</strong> ₹500 × 3 = ₹1500 for 3 months + 1 month extra</p>
+                    <p><strong>Validity:</strong> 4 months</p>
+                </div>
+                <div id="offer-60-5" class="offer-details-content" style="display:none;">
+                    <p><strong>Price:</strong> ₹500 × 5 = ₹2500 for 5 months + 2 months extra</p>
+                    <p><strong>Validity:</strong> 7 months</p>
+                </div>
+                <div id="offer-60-9" class="offer-details-content" style="display:none;">
+                    <p><strong>Price:</strong> ₹500 × 9 = ₹4500 for 9 months + 4 months extra</p>
+                    <p><strong>Validity:</strong> 13 months</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 75 Mbps Plan -->
+        <div class="plan">
+            <i class="fas fa-tachometer-alt fa-3x"></i>
+            <h3>75 Mbps</h3>
+            <p>₹550 per month</p>
+            <button class="offer-btn" onclick="toggleOffer('offer-75')">View Offers</button>
+            <div id="offer-75" class="offer-details" style="display:none;">
+                <div class="offer-box" onclick="showDetails('offer-75-3')">
+                    <p><strong>3 Months + 1 Month Extra</strong></p>
+                </div>
+                <div class="offer-box" onclick="showDetails('offer-75-5')">
+                    <p><strong>5 Months + 2 Months Extra</strong></p>
+                </div>
+                <div class="offer-box" onclick="showDetails('offer-75-9')">
+                    <p><strong>9 Months + 4 Months Extra</strong></p>
+                </div>
+                <!-- Detailed offer details hidden initially -->
+                <div id="offer-75-3" class="offer-details-content" style="display:none;">
+                    <p><strong>Price:</strong> ₹550 × 3 = ₹1650 for 3 months + 1 month extra</p>
+                    <p><strong>Validity:</strong> 4 months</p>
+                </div>
+                <div id="offer-75-5" class="offer-details-content" style="display:none;">
+                    <p><strong>Price:</strong> ₹550 × 5 = ₹2750 for 5 months + 2 months extra</p>
+                    <p><strong>Validity:</strong> 7 months</p>
+                </div>
+                <div id="offer-75-9" class="offer-details-content" style="display:none;">
+                    <p><strong>Price:</strong> ₹550 × 9 = ₹4950 for 9 months + 4 months extra</p>
+                    <p><strong>Validity:</strong> 13 months</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 100 Mbps Plan -->
+        <div class="plan">
+            <i class="fas fa-tachometer-alt fa-3x"></i>
+            <h3>100 Mbps</h3>
+            <p>₹700 per month</p>
+            <button class="offer-btn" onclick="toggleOffer('offer-100')">View Offers</button>
+            <div id="offer-100" class="offer-details" style="display:none;">
+                <div class="offer-box" onclick="showDetails('offer-100-3')">
+                    <p><strong>3 Months + 1 Month Extra</strong></p>
+                </div>
+                <div class="offer-box" onclick="showDetails('offer-100-5')">
+                    <p><strong>5 Months + 2 Months Extra</strong></p>
+                </div>
+                <div class="offer-box" onclick="showDetails('offer-100-9')">
+                    <p><strong>9 Months + 4 Months Extra</strong></p>
+                </div>
+                <!-- Detailed offer details hidden initially -->
+                <div id="offer-100-3" class="offer-details-content" style="display:none;">
+                    <p><strong>Price:</strong> ₹700 × 3 = ₹2100 for 3 months + 1 month extra</p>
+                    <p><strong>Validity:</strong> 4 months</p>
+                </div>
+                <div id="offer-100-5" class="offer-details-content" style="display:none;">
+                    <p><strong>Price:</strong> ₹700 × 5 = ₹3500 for 5 months + 2 months extra</p>
+                    <p><strong>Validity:</strong> 7 months</p>
+                </div>
+                <div id="offer-100-9" class="offer-details-content" style="display:none;">
+                    <p><strong>Price:</strong> ₹700 × 9 = ₹6300 for 9 months + 4 months extra</p>
+                    <p><strong>Validity:</strong> 13 months</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 125 Mbps Plan -->
+        <div class="plan">
+            <i class="fas fa-tachometer-alt fa-3x"></i>
+            <h3>125 Mbps</h3>
+            <p>₹800 per month</p>
+            <button class="offer-btn" onclick="toggleOffer('offer-125')">View Offers</button>
+            <div id="offer-125" class="offer-details" style="display:none;">
+                <div class="offer-box" onclick="showDetails('offer-125-3')">
+                    <p><strong>3 Months + 1 Month Extra</strong></p>
+                </div>
+                <div class="offer-box" onclick="showDetails('offer-125-5')">
+                    <p><strong>5 Months + 2 Months Extra</strong></p>
+                </div>
+                <div class="offer-box" onclick="showDetails('offer-125-9')">
+                    <p><strong>9 Months + 4 Months Extra</strong></p>
+                </div>
+                <!-- Detailed offer details hidden initially -->
+                <div id="offer-125-3" class="offer-details-content" style="display:none;">
+                    <p><strong>Price:</strong> ₹800 × 3 = ₹2400 for 3 months + 1 month extra</p>
+                    <p><strong>Validity:</strong> 4 months</p>
+                </div>
+                <div id="offer-125-5" class="offer-details-content" style="display:none;">
+                    <p><strong>Price:</strong> ₹800 × 5 = ₹4000 for 5 months + 2 months extra</p>
+                    <p><strong>Validity:</strong> 7 months</p>
+                </div>
+                <div id="offer-125-9" class="offer-details-content" style="display:none;">
+                    <p><strong>Price:</strong> ₹800 × 9 = ₹7200 for 9 months + 4 months extra</p>
+                    <p><strong>Validity:</strong> 13 months</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 150 Mbps Plan -->
+        <div class="plan">
+            <i class="fas fa-tachometer-alt fa-3x"></i>
+            <h3>150 Mbps</h3>
+            <p>₹1000 per month</p>
+            <button class="offer-btn" onclick="toggleOffer('offer-150')">View Offers</button>
+            <div id="offer-150" class="offer-details" style="display:none;">
+                <div class="offer-box" onclick="showDetails('offer-150-3')">
+                    <p><strong>3 Months + 1 Month Extra</strong></p>
+                </div>
+                <div class="offer-box" onclick="showDetails('offer-150-5')">
+                    <p><strong>5 Months + 2 Months Extra</strong></p>
+                </div>
+                <div class="offer-box" onclick="showDetails('offer-150-9')">
+                    <p><strong>9 Months + 4 Months Extra</strong></p>
+                </div>
+                <!-- Detailed offer details hidden initially -->
+                <div id="offer-150-3" class="offer-details-content" style="display:none;">
+                    <p><strong>Price:</strong> ₹1000 × 3 = ₹3000 for 3 months + 1 month extra</p>
+                    <p><strong>Validity:</strong> 4 months</p>
+                </div>
+                <div id="offer-150-5" class="offer-details-content" style="display:none;">
+                    <p><strong>Price:</strong> ₹1000 × 5 = ₹5000 for 5 months + 2 months extra</p>
+                    <p><strong>Validity:</strong> 7 months</p>
+                </div>
+                <div id="offer-150-9" class="offer-details-content" style="display:none;">
+                    <p><strong>Price:</strong> ₹1000 × 9 = ₹9000 for 9 months + 4 months extra</p>
+                    <p><strong>Validity:</strong> 13 months</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Function to toggle the display of the offer list
+    function toggleOffer(offerId) {
+        var offerDetails = document.getElementById(offerId);
+        // Toggle visibility of offer list
+        if (offerDetails.style.display === "none" || offerDetails.style.display === "") {
+            offerDetails.style.display = "block"; // Show the offer list
+        } else {
+            offerDetails.style.display = "none"; // Hide the offer list
+        }
+    }
+
+    // Function to show specific offer details when clicked
+    function showDetails(offerDetailId) {
+        // Hide all offer details
+        var offerContents = document.querySelectorAll('.offer-details-content');
+        offerContents.forEach(function(content) {
+            content.style.display = "none";
+        });
+
+        // Show clicked offer details
+        var offerContent = document.getElementById(offerDetailId);
+        if (offerContent.style.display === "none" || offerContent.style.display === "") {
+            offerContent.style.display = "block"; // Show the offer details
+        } else {
+            offerContent.style.display = "none"; // Hide the offer details
+        }
+    }
+</script>
+
+    <!-- About -->
+    <section id="about">
+        <h2>About Bari WiFi</h2>
+        <p>We provide reliable and high-speed internet services tailored to your needs.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Phone: +91 9563219204</p>
+        <p>Email: bariwifi2003@gmail.com</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Bari WiFi. All rights reserved.</p>
+    </footer>
+</body>
+</html>
